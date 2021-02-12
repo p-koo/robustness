@@ -27,7 +27,7 @@ if args.noreg:
   bn = [False, False, False, False, False]
   name += '_noreg'
 else:
-  dropout=[0.1, 0.2, 0.3, 0.4, 0.5], 
+  dropout=[0.1, 0.2, 0.3, 0.4, 0.5] 
   bn=[True, True, True, True, True]
 
 l2_strength = None

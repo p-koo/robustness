@@ -19,7 +19,7 @@ def load_data(filepath):
   x_test = x_test.transpose([0,2,1])
  
   N, L, A = x_train.shape
-  return x_train, y_train, x_valid, y_valid, x_test, y_test
+  return x_train, y_train, x_valid, y_valid, x_test, y_test, model_test
  
 
 
