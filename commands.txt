@@ -1,66 +1,7 @@
-#------------------------------------------------------------------------------
-# CNN-p
-#------------------------------------------------------------------------------
-
-python synthetic_cnn_robust_train.py -o synthetic -a relu -name 0
-python synthetic_cnn_robust_train.py -o synthetic -a relu -name 1
-python synthetic_cnn_robust_train.py -o synthetic -a relu -name 2
-python synthetic_cnn_robust_train.py -o synthetic -a relu -name 3
-python synthetic_cnn_robust_train.py -o synthetic -a relu -name 4
-python synthetic_cnn_robust_train.py -o synthetic -a relu -name 5
-python synthetic_cnn_robust_train.py -o synthetic -a relu -name 6
-python synthetic_cnn_robust_train.py -o synthetic -a relu -name 7
-python synthetic_cnn_robust_train.py -o synthetic -a relu -name 8
-python synthetic_cnn_robust_train.py -o synthetic -a relu -name 9
-
-python synthetic_cnn_train.py -o synthetic -a relu -name 0
-python synthetic_cnn_train.py -o synthetic -a relu -name 1
-python synthetic_cnn_train.py -o synthetic -a relu -name 2
-python synthetic_cnn_train.py -o synthetic -a relu -name 3
-python synthetic_cnn_train.py -o synthetic -a relu -name 4
-python synthetic_cnn_train.py -o synthetic -a relu -name 5
-python synthetic_cnn_train.py -o synthetic -a relu -name 6
-python synthetic_cnn_train.py -o synthetic -a relu -name 7
-python synthetic_cnn_train.py -o synthetic -a relu -name 8
-python synthetic_cnn_train.py -o synthetic -a relu -name 9
-
-python synthetic_cnn_robust_train.py -o synthetic -a exponential -name 0
-python synthetic_cnn_robust_train.py -o synthetic -a exponential -name 1
-python synthetic_cnn_robust_train.py -o synthetic -a exponential -name 2
-python synthetic_cnn_robust_train.py -o synthetic -a exponential -name 3
-python synthetic_cnn_robust_train.py -o synthetic -a exponential -name 4
-python synthetic_cnn_robust_train.py -o synthetic -a exponential -name 5
-python synthetic_cnn_robust_train.py -o synthetic -a exponential -name 6
-python synthetic_cnn_robust_train.py -o synthetic -a exponential -name 7
-python synthetic_cnn_robust_train.py -o synthetic -a exponential -name 8
-python synthetic_cnn_robust_train.py -o synthetic -a exponential -name 9
-
-python synthetic_cnn_train.py -o synthetic -a exponential -name 0
-python synthetic_cnn_train.py -o synthetic -a exponential -name 1
-python synthetic_cnn_train.py -o synthetic -a exponential -name 2
-python synthetic_cnn_train.py -o synthetic -a exponential -name 3
-python synthetic_cnn_train.py -o synthetic -a exponential -name 4
-python synthetic_cnn_train.py -o synthetic -a exponential -name 5
-python synthetic_cnn_train.py -o synthetic -a exponential -name 6
-python synthetic_cnn_train.py -o synthetic -a exponential -name 7
-python synthetic_cnn_train.py -o synthetic -a exponential -name 8
-python synthetic_cnn_train.py -o synthetic -a exponential -name 9
-
 
 #------------------------------------------------------------------------------
 # CNN-dist
 #------------------------------------------------------------------------------
-
-python synthetic_cnndist_robust_train.py -o synthetic -a relu -name 0
-python synthetic_cnndist_robust_train.py -o synthetic -a relu -name 1
-python synthetic_cnndist_robust_train.py -o synthetic -a relu -name 2
-python synthetic_cnndist_robust_train.py -o synthetic -a relu -name 3
-python synthetic_cnndist_robust_train.py -o synthetic -a relu -name 4
-python synthetic_cnndist_robust_train.py -o synthetic -a relu -name 5
-python synthetic_cnndist_robust_train.py -o synthetic -a relu -name 6
-python synthetic_cnndist_robust_train.py -o synthetic -a relu -name 7
-python synthetic_cnndist_robust_train.py -o synthetic -a relu -name 8
-python synthetic_cnndist_robust_train.py -o synthetic -a relu -name 9
 
 python synthetic_cnndist_train.py -o synthetic -a relu -name 0
 python synthetic_cnndist_train.py -o synthetic -a relu -name 1
@@ -73,17 +14,6 @@ python synthetic_cnndist_train.py -o synthetic -a relu -name 7
 python synthetic_cnndist_train.py -o synthetic -a relu -name 8
 python synthetic_cnndist_train.py -o synthetic -a relu -name 9
 
-python synthetic_cnndist_robust_train.py -o synthetic -a exponential -name 0
-python synthetic_cnndist_robust_train.py -o synthetic -a exponential -name 1
-python synthetic_cnndist_robust_train.py -o synthetic -a exponential -name 2
-python synthetic_cnndist_robust_train.py -o synthetic -a exponential -name 3
-python synthetic_cnndist_robust_train.py -o synthetic -a exponential -name 4
-python synthetic_cnndist_robust_train.py -o synthetic -a exponential -name 5
-python synthetic_cnndist_robust_train.py -o synthetic -a exponential -name 6
-python synthetic_cnndist_robust_train.py -o synthetic -a exponential -name 7
-python synthetic_cnndist_robust_train.py -o synthetic -a exponential -name 8
-python synthetic_cnndist_robust_train.py -o synthetic -a exponential -name 9
-
 python synthetic_cnndist_train.py -o synthetic -a exponential -name 0
 python synthetic_cnndist_train.py -o synthetic -a exponential -name 1
 python synthetic_cnndist_train.py -o synthetic -a exponential -name 2
@@ -95,21 +25,33 @@ python synthetic_cnndist_train.py -o synthetic -a exponential -name 7
 python synthetic_cnndist_train.py -o synthetic -a exponential -name 8
 python synthetic_cnndist_train.py -o synthetic -a exponential -name 9
 
+python synthetic_cnndist_robust_train.py -o synthetic -a relu -name 0
+python synthetic_cnndist_robust_train.py -o synthetic -a relu -name 1
+python synthetic_cnndist_robust_train.py -o synthetic -a relu -name 2
+python synthetic_cnndist_robust_train.py -o synthetic -a relu -name 3
+python synthetic_cnndist_robust_train.py -o synthetic -a relu -name 4
+python synthetic_cnndist_robust_train.py -o synthetic -a relu -name 5
+python synthetic_cnndist_robust_train.py -o synthetic -a relu -name 6
+python synthetic_cnndist_robust_train.py -o synthetic -a relu -name 7
+python synthetic_cnndist_robust_train.py -o synthetic -a relu -name 8
+python synthetic_cnndist_robust_train.py -o synthetic -a relu -name 9
+
+python synthetic_cnndist_robust_train.py -o synthetic -a exponential -name 0
+python synthetic_cnndist_robust_train.py -o synthetic -a exponential -name 1
+python synthetic_cnndist_robust_train.py -o synthetic -a exponential -name 2
+python synthetic_cnndist_robust_train.py -o synthetic -a exponential -name 3
+python synthetic_cnndist_robust_train.py -o synthetic -a exponential -name 4
+python synthetic_cnndist_robust_train.py -o synthetic -a exponential -name 5
+python synthetic_cnndist_robust_train.py -o synthetic -a exponential -name 6
+python synthetic_cnndist_robust_train.py -o synthetic -a exponential -name 7
+python synthetic_cnndist_robust_train.py -o synthetic -a exponential -name 8
+python synthetic_cnndist_robust_train.py -o synthetic -a exponential -name 9
+
+
 
 #------------------------------------------------------------------------------
 # CNN-attention
 #------------------------------------------------------------------------------
-
-python synthetic_cnnatt_robust_train.py -o synthetic -a relu -name 0
-python synthetic_cnnatt_robust_train.py -o synthetic -a relu -name 1
-python synthetic_cnnatt_robust_train.py -o synthetic -a relu -name 2
-python synthetic_cnnatt_robust_train.py -o synthetic -a relu -name 3
-python synthetic_cnnatt_robust_train.py -o synthetic -a relu -name 4
-python synthetic_cnnatt_robust_train.py -o synthetic -a relu -name 5
-python synthetic_cnnatt_robust_train.py -o synthetic -a relu -name 6
-python synthetic_cnnatt_robust_train.py -o synthetic -a relu -name 7
-python synthetic_cnnatt_robust_train.py -o synthetic -a relu -name 8
-python synthetic_cnnatt_robust_train.py -o synthetic -a relu -name 9
 
 python synthetic_cnnatt_train.py -o synthetic -a relu -name 0
 python synthetic_cnnatt_train.py -o synthetic -a relu -name 1
@@ -121,17 +63,6 @@ python synthetic_cnnatt_train.py -o synthetic -a relu -name 6
 python synthetic_cnnatt_train.py -o synthetic -a relu -name 7
 python synthetic_cnnatt_train.py -o synthetic -a relu -name 8
 python synthetic_cnnatt_train.py -o synthetic -a relu -name 9
-
-python synthetic_cnnatt_robust_train.py -o synthetic -a exponential -name 0
-python synthetic_cnnatt_robust_train.py -o synthetic -a exponential -name 1
-python synthetic_cnnatt_robust_train.py -o synthetic -a exponential -name 2
-python synthetic_cnnatt_robust_train.py -o synthetic -a exponential -name 3
-python synthetic_cnnatt_robust_train.py -o synthetic -a exponential -name 4
-python synthetic_cnnatt_robust_train.py -o synthetic -a exponential -name 5
-python synthetic_cnnatt_robust_train.py -o synthetic -a exponential -name 6
-python synthetic_cnnatt_robust_train.py -o synthetic -a exponential -name 7
-python synthetic_cnnatt_robust_train.py -o synthetic -a exponential -name 8
-python synthetic_cnnatt_robust_train.py -o synthetic -a exponential -name 9
 
 python synthetic_cnnatt_train.py -o synthetic -a exponential -name 0
 python synthetic_cnnatt_train.py -o synthetic -a exponential -name 1
@@ -145,20 +76,80 @@ python synthetic_cnnatt_train.py -o synthetic -a exponential -name 8
 python synthetic_cnnatt_train.py -o synthetic -a exponential -name 9
 
 
+python synthetic_cnnatt_robust_train.py -o synthetic -a relu -name 0
+python synthetic_cnnatt_robust_train.py -o synthetic -a relu -name 1
+python synthetic_cnnatt_robust_train.py -o synthetic -a relu -name 2
+python synthetic_cnnatt_robust_train.py -o synthetic -a relu -name 3
+python synthetic_cnnatt_robust_train.py -o synthetic -a relu -name 4
+python synthetic_cnnatt_robust_train.py -o synthetic -a relu -name 5
+python synthetic_cnnatt_robust_train.py -o synthetic -a relu -name 6
+python synthetic_cnnatt_robust_train.py -o synthetic -a relu -name 7
+python synthetic_cnnatt_robust_train.py -o synthetic -a relu -name 8
+python synthetic_cnnatt_robust_train.py -o synthetic -a relu -name 9
+
+python synthetic_cnnatt_robust_train.py -o synthetic -a exponential -name 0
+python synthetic_cnnatt_robust_train.py -o synthetic -a exponential -name 1
+python synthetic_cnnatt_robust_train.py -o synthetic -a exponential -name 2
+python synthetic_cnnatt_robust_train.py -o synthetic -a exponential -name 3
+python synthetic_cnnatt_robust_train.py -o synthetic -a exponential -name 4
+python synthetic_cnnatt_robust_train.py -o synthetic -a exponential -name 5
+python synthetic_cnnatt_robust_train.py -o synthetic -a exponential -name 6
+python synthetic_cnnatt_robust_train.py -o synthetic -a exponential -name 7
+python synthetic_cnnatt_robust_train.py -o synthetic -a exponential -name 8
+python synthetic_cnnatt_robust_train.py -o synthetic -a exponential -name 9
+
+
 #------------------------------------------------------------------------------
 # CNN-p
 #------------------------------------------------------------------------------
 
-python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a relu -name 0
-python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a relu -name 1
-python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a relu -name 2
-python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a relu -name 3
-python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a relu -name 4
-python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a relu -name 5
-python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a relu -name 6
-python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a relu -name 7
-python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a relu -name 8
-python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a relu -name 9
+python synthetic_cnn_train.py -o synthetic -a relu -name 0
+python synthetic_cnn_train.py -o synthetic -a relu -name 1
+python synthetic_cnn_train.py -o synthetic -a relu -name 2
+python synthetic_cnn_train.py -o synthetic -a relu -name 3
+python synthetic_cnn_train.py -o synthetic -a relu -name 4
+python synthetic_cnn_train.py -o synthetic -a relu -name 5
+python synthetic_cnn_train.py -o synthetic -a relu -name 6
+python synthetic_cnn_train.py -o synthetic -a relu -name 7
+python synthetic_cnn_train.py -o synthetic -a relu -name 8
+python synthetic_cnn_train.py -o synthetic -a relu -name 9
+
+python synthetic_cnn_train.py -o synthetic -a exponential -name 0
+python synthetic_cnn_train.py -o synthetic -a exponential -name 1
+python synthetic_cnn_train.py -o synthetic -a exponential -name 2
+python synthetic_cnn_train.py -o synthetic -a exponential -name 3
+python synthetic_cnn_train.py -o synthetic -a exponential -name 4
+python synthetic_cnn_train.py -o synthetic -a exponential -name 5
+python synthetic_cnn_train.py -o synthetic -a exponential -name 6
+python synthetic_cnn_train.py -o synthetic -a exponential -name 7
+python synthetic_cnn_train.py -o synthetic -a exponential -name 8
+python synthetic_cnn_train.py -o synthetic -a exponential -name 9
+
+python synthetic_cnn_robust_train.py -o synthetic -a relu -name 0
+python synthetic_cnn_robust_train.py -o synthetic -a relu -name 1
+python synthetic_cnn_robust_train.py -o synthetic -a relu -name 2
+python synthetic_cnn_robust_train.py -o synthetic -a relu -name 3
+python synthetic_cnn_robust_train.py -o synthetic -a relu -name 4
+python synthetic_cnn_robust_train.py -o synthetic -a relu -name 5
+python synthetic_cnn_robust_train.py -o synthetic -a relu -name 6
+python synthetic_cnn_robust_train.py -o synthetic -a relu -name 7
+python synthetic_cnn_robust_train.py -o synthetic -a relu -name 8
+python synthetic_cnn_robust_train.py -o synthetic -a relu -name 9
+
+python synthetic_cnn_robust_train.py -o synthetic -a exponential -name 0
+python synthetic_cnn_robust_train.py -o synthetic -a exponential -name 1
+python synthetic_cnn_robust_train.py -o synthetic -a exponential -name 2
+python synthetic_cnn_robust_train.py -o synthetic -a exponential -name 3
+python synthetic_cnn_robust_train.py -o synthetic -a exponential -name 4
+python synthetic_cnn_robust_train.py -o synthetic -a exponential -name 5
+python synthetic_cnn_robust_train.py -o synthetic -a exponential -name 6
+python synthetic_cnn_robust_train.py -o synthetic -a exponential -name 7
+python synthetic_cnn_robust_train.py -o synthetic -a exponential -name 8
+python synthetic_cnn_robust_train.py -o synthetic -a exponential -name 9
+
+#------------------------------------------------------------------------------
+# CNN-p
+#------------------------------------------------------------------------------
 
 python synthetic_cnn_train.py -noreg -o synthetic_noreg -a relu -name 0
 python synthetic_cnn_train.py -noreg -o synthetic_noreg -a relu -name 1
@@ -171,17 +162,6 @@ python synthetic_cnn_train.py -noreg -o synthetic_noreg -a relu -name 7
 python synthetic_cnn_train.py -noreg -o synthetic_noreg -a relu -name 8
 python synthetic_cnn_train.py -noreg -o synthetic_noreg -a relu -name 9
 
-python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a exponential -name 0
-python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a exponential -name 1
-python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a exponential -name 2
-python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a exponential -name 3
-python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a exponential -name 4
-python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a exponential -name 5
-python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a exponential -name 6
-python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a exponential -name 7
-python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a exponential -name 8
-python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a exponential -name 9
-
 python synthetic_cnn_train.py -noreg -o synthetic_noreg -a exponential -name 0
 python synthetic_cnn_train.py -noreg -o synthetic_noreg -a exponential -name 1
 python synthetic_cnn_train.py -noreg -o synthetic_noreg -a exponential -name 2
@@ -192,6 +172,28 @@ python synthetic_cnn_train.py -noreg -o synthetic_noreg -a exponential -name 6
 python synthetic_cnn_train.py -noreg -o synthetic_noreg -a exponential -name 7
 python synthetic_cnn_train.py -noreg -o synthetic_noreg -a exponential -name 8
 python synthetic_cnn_train.py -noreg -o synthetic_noreg -a exponential -name 9
+
+python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a relu -name 0
+python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a relu -name 1
+python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a relu -name 2
+python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a relu -name 3
+python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a relu -name 4
+python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a relu -name 5
+python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a relu -name 6
+python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a relu -name 7
+python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a relu -name 8
+python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a relu -name 9
+
+python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a exponential -name 0
+python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a exponential -name 1
+python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a exponential -name 2
+python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a exponential -name 3
+python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a exponential -name 4
+python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a exponential -name 5
+python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a exponential -name 6
+python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a exponential -name 7
+python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a exponential -name 8
+python synthetic_cnn_robust_train.py -noreg -o synthetic_noreg -a exponential -name 9
 
 
 #------------------------------------------------------------------------------

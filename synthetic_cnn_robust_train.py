@@ -64,7 +64,7 @@ num_labels = y_train.shape[1]
 
 #-----------------------------------------------------------------
 # create model
-model = genome_model.model(input_shape=(L,A), num_labels=1, activation=activation, 
+model = genome_model.model(input_shape=(L,A), num_labels=1, activation=activation, pool_size=4, 
                            dropout=dropout, bn=bn, l2=None)
 loss = keras.losses.BinaryCrossentropy(from_logits=False, label_smoothing=0.0)
 optimizer = keras.optimizers.Adam(learning_rate=0.001)
