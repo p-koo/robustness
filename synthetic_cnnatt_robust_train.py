@@ -66,7 +66,7 @@ optimizer = keras.optimizers.Adam(learning_rate=0.001)
 attacker = tfomics.attack.PGDAttack((batch_size,L,A), model, loss, learning_rate=0.01, epsilon=epsilon, num_steps=num_steps)
 history, trainer = tfomics.fit.fit_robust(model, loss, optimizer, attacker, x_train, y_train, validation_data=(x_valid, y_valid), 
                num_epochs=200, batch_size=batch_size, shuffle=True, metrics=['auroc','aupr'], 
-               clean_epoch=10, mix_epoch=mix_epoch,  es_start_epoch=mix_epoch, 
+               clean_epoch=10, mix_epoch=25,  es_start_epoch=25, 
                es_patience=15, es_metric='auroc', es_criterion='max',
                lr_decay=0.3, lr_patience=5, lr_metric='auroc', lr_criterion='max')
 
