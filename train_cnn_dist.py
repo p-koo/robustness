@@ -36,9 +36,9 @@ for reg in [True, False]:
     name += '_noreg'
 
 
-  for activation in ['gelu', 'exponential', 'relu']:
+  for activation in ['swish', 'exponential', 'relu']:
     name += '_'+str(activation)
-    for other_activation in ['gelu', 'relu']:
+    for other_activation in ['swish', 'relu']:
       name += '_'+str(other_activation)
 
       for trial in range(num_trials):
