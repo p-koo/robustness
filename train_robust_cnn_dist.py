@@ -30,10 +30,10 @@ num_labels = y_train.shape[1]
 for grad in [False, True]:
   if grad:
     epsilon = 0.05
-    num_steps = 12
+    num_steps = 10
     decay = False
     grad_sign = True
-    lr = 0.005
+    lr = 0.01
     name = base_name + '_grad'
   else:
     epsilon = 0.1
