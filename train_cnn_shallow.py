@@ -81,8 +81,8 @@ for reg in [True, False]:
 
         # get positive label sequences and sequence model
         pos_index = np.where(y_test[:,0] == 1)[0]   
-        X = x_test[pos_index]
-        X_model = model_test[pos_index]
+        X = x_test[pos_index][:1000]
+        X_model = model_test[pos_index][:1000]
 
         # calculate attribution maps
         explainer = tfomics.explain.Explainer(model, class_index=0)
