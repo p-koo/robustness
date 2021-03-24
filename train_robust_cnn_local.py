@@ -35,21 +35,22 @@ for grad in [False, True]:
     decay = False
     grad_sign = True
     lr = 0.01
-    name = base_name + '_grad'
   else:
     epsilon = 0.1
     num_steps = 25
     decay = True
     grad_sign = False
     lr = 0.1
-    name = base_name + '_sign'
 
   for activation in ['exponential', 'relu']:
-    name += '_'+str(activation)
     for other_activation in ['relu']:
-      name += '_'+str(other_activation)
 
       for trial in range(num_trials):
+        if grad:
+          name = base_name+'_grad'
+        else:
+          name = base_name+ '_sign'
+        name += '_'+str(activation)
         name += '_'+str(trial)
         model = genome_model.model(input_shape=(L,A), num_labels=1, activation=activation, pool_size=pool_size,
                                    other_activation=other_activation, dropout=dropout, bn=bn, l2=None)

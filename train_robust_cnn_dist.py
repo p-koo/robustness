@@ -44,12 +44,16 @@ for grad in [False, True]:
     name = base_name + '_sign'
 
   for activation in ['relu']:
-    name += '_'+str(activation)
     for other_activation in ['relu']:
-      name += '_'+str(other_activation)
 
       for trial in range(num_trials):
+        if grad:
+          name = base_name+'_grad'
+        else:
+          name = base_name+ '_sign'
+        name += '_'+str(activation)
         name += '_'+str(trial)
+        
         model = genome_model.model(input_shape=(L,A), num_labels=1, activation=activation, 
                                    other_activation=other_activation, dropout=dropout, bn=bn, l2=None)
         loss = keras.losses.BinaryCrossentropy(from_logits=False, label_smoothing=0.0)

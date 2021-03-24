@@ -29,20 +29,22 @@ for reg in [True, False]:
   if reg:
     dropout=[0.1, 0.2, 0.3, 0.4, 0.5] 
     bn=[True, True, True, True, True]
-    name = base_name+'_reg'
   else:
     dropout = [0, 0, 0, 0, 0]
     bn = [False, False, False, False, False]
-    name = base_name+ '_noreg'
 
 
   for activation in ['exponential', 'relu']:
-    name += '_'+str(activation)
     for other_activation in ['relu']:
-      name += '_'+str(other_activation)
 
       for trial in range(num_trials):
+        if reg:
+          name = base_name+'_reg'
+        else:
+          name = base_name+ '_noreg'
+        name += '_'+str(activation)
         name += '_'+str(trial)
+        
         model = genome_model.model(input_shape=(L,A), num_labels=1, activation=activation, 
                                    other_activation=other_activation, dropout=dropout, bn=bn, l2=None)
         loss = keras.losses.BinaryCrossentropy(from_logits=False, label_smoothing=0.0)
