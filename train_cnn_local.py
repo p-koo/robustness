@@ -31,11 +31,11 @@ for reg in [True, False]:
   if reg:
     dropout = [0.2, 0.2, 0.5] 
     bn = [True, True, True]
-    name += '_reg'
+    name = base_name+ '_reg'
   else:
     dropout = [0, 0, 0]
     bn = [False, False, False]
-    name += '_noreg'
+    name = base_name+ '_noreg'
 
 
   for activation in ['exponential', 'relu']:
