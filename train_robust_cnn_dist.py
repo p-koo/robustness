@@ -28,7 +28,7 @@ num_labels = y_train.shape[1]
 
 
 for grad in [False, True]:
-  if attack:
+  if grad:
     epsilon = 0.05
     num_steps = 12
     decay = False
