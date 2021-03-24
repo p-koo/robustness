@@ -59,7 +59,7 @@ for reg in [True, False]:
         else:
           history, trainer = tfomics.fit.fit(model, loss, optimizer, x_train, y_train, validation_data, verbose=True,  
                                            metrics=['auroc', 'aupr'], num_epochs=100, batch_size=batch_size, shuffle=True, 
-                                           es_patience=100, es_metric='auroc', es_criterion='max'):
+                                           es_patience=100, es_metric='auroc', es_criterion='max')
 
         #-----------------------------------------------------------------
         # save model
