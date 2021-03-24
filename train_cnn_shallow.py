@@ -61,12 +61,15 @@ for reg in [True, False]:
                                            metrics=['auroc', 'aupr'], num_epochs=100, batch_size=batch_size, shuffle=True, 
                                            es_patience=100, es_metric='auroc', es_criterion='max'):
 
+        #-----------------------------------------------------------------
         # save model
         model.save_weights(os.path.join(results_path, 'weights_'+name+'.h5'))
 
+        #-----------------------------------------------------------------
         # Evaluate model on test set  (This uses Tensorflow running metrics -- not sklearn)
         testset = tf.data.Dataset.from_tensor_slices((x_test, y_test))
         trainer.evaluate('test', testset, batch_size=128)
+
 
         # save history
         history = trainer.get_metrics('test', history)
