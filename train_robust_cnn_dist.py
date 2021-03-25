@@ -89,9 +89,9 @@ for grad in [False, True]:
         # Interpretability analysis
 
         # get positive label sequences and sequence model
-        pos_index = np.where(y_test[:,0] == 1)[0]   
-        X = x_test[pos_index][:1000]
-        X_model = model_test[pos_index][:1000]
+        pos_index = np.where(y_test[:,0] == 1)[0][:500]      
+        X = x_test[pos_index]
+        X_model = model_test[pos_index]
 
         # calculate attribution maps
         explainer = tfomics.explain.Explainer(model, class_index=0)
@@ -151,14 +151,6 @@ for grad in [False, True]:
         #----------------------------------------------------------
         # plot results
         #----------------------------------------------------------
-
-        # plot first layer filters
-        W = tfomics.moana.filter_activations(x_test, model, layer=2, window=20, threshold=0.5)
-        fig = plt.figure(figsize=(20,4))
-        W_df = tfomics.impress.plot_filters(W, fig, num_cols=8, alphabet='ACGT')
-        outfile = os.path.join(results_path, 'filter_'+name+'.pdf')
-        fig.savefig(outfile, format='pdf', dpi=200, bbox_inches='tight')
-        plt.close()
 
         # Plot performance as a box-violin plot
         score_names = ['saliency_scores', 'mut_scores', 'intgrad_scores', 'smoothgrad_scores', 'exp_intgrad_scores']
