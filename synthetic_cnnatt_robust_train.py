@@ -89,7 +89,7 @@ with open(os.path.join(results_path, 'history_'+name+'.pickle'), 'wb') as f:
 # Interpretability analysis
 
 # get positive label sequences and sequence model
-pos_index = np.where(y_test[:,0] == 1)[0]   
+pos_index = np.where(y_test[:,0] == 1)[0][:1000]   
 X = x_test[pos_index]
 X_model = model_test[pos_index]
 
