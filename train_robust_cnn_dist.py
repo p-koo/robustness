@@ -43,7 +43,7 @@ for grad in [False, True]:
     lr = 0.1
     name = base_name + '_sign'
 
-  for activation in ['relu']:
+  for activation in ['exponential']:
     for other_activation in ['relu']:
 
       for trial in range(num_trials):
