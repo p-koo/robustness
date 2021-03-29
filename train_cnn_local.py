@@ -16,7 +16,7 @@ batch_size = 32
 num_trials = 5
 pool_size=25
 
-results_path = helper.make_directory('../results', 'synthetic')
+results_path = helper.make_directory('../results2', 'synthetic')
 
 
 # load data

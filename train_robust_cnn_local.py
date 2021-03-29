@@ -17,7 +17,7 @@ num_trials = 5
 pool_size=25
 dropout = [0.2, 0.2, 0.5] 
 bn = [True, True, True]
-results_path = helper.make_directory('../results', 'synthetic')
+results_path = helper.make_directory('../results2', 'synthetic')
 
 
 # load data
@@ -31,16 +31,16 @@ num_labels = y_train.shape[1]
 for grad in [False, True]:
   if grad:
     epsilon = 0.05
-    num_steps = 10
+    num_steps = 15
     decay = False
     grad_sign = True
-    lr = 0.01
+    lr = 0.005
   else:
-    epsilon = 0.1
+    epsilon = 0.05
     num_steps = 25
-    decay = True
+    decay = False
     grad_sign = False
-    lr = 0.1
+    lr = 0.01
 
   for activation in ['exponential', 'relu']:
     for other_activation in ['relu']:
