@@ -25,7 +25,7 @@ N, L, A = x_train.shape
 num_labels = y_train.shape[1]
 
 
-for reg in [True, False]:
+for reg in [False]:
   if reg:
     dropout=[0.1, 0.2, 0.3, 0.4, 0.5] 
     bn=[True, True, True, True, True]
@@ -57,7 +57,7 @@ for reg in [True, False]:
                                                  es_patience=15, es_metric='auroc', es_criterion='max',
                                                  lr_decay=0.3, lr_patience=5, lr_metric='auroc', lr_criterion='max')
         else:
-          history, trainer = tfomics.fit.fit(model, loss, optimizer, x_train, y_train, validation_data, verbose=True,  
+          history, trainer = tfomics.fit.fit(model, loss, optimizer, x_train, y_train, validation_data=(x_valid, y_valid), verbose=True,  
                                            metrics=['auroc', 'aupr'], num_epochs=100, batch_size=batch_size, shuffle=True, 
                                            es_patience=100, es_metric='auroc', es_criterion='max')
 
