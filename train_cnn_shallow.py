@@ -46,6 +46,7 @@ for reg in [False]:
           name = base_name+ '_noreg'
         name += '_'+str(activation)
         name += '_'+str(trial)
+        print(name)
         
         model = genome_model.model(input_shape=(L,A), num_labels=1, activation=activation, 
                                    other_activation=other_activation, dropout=dropout, bn=bn, l2=None)
