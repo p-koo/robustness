@@ -16,7 +16,7 @@ batch_size = 32
 num_trials = 5
 pool_size=4
 
-results_path = helper.make_directory('../results2', 'synthetic')
+results_path = helper.make_directory('../results', 'synthetic')
 
 
 # load data
@@ -36,7 +36,7 @@ for reg in [True, False]:
     bn = [False, False, False]
 
 
-  for activation in ['exponential', 'relu']:
+  for activation in ['relu', 'exponential']:
     for other_activation in ['relu']:
 
       for trial in range(num_trials):
