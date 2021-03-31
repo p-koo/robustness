@@ -32,8 +32,8 @@ for reg in [False]:
     dropout = [0.2, 0.2, 0.5] 
     bn = [True, True, True]
   else:
-    dropout = [0, 0, 0]
-    bn = [False, False, False]
+    dropout = [0, 0, 0.5]
+    bn = [True, True, True]
 
 
   for activation in ['relu', 'exponential']:

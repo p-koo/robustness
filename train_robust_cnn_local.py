@@ -17,7 +17,7 @@ num_trials = 5
 pool_size=25
 dropout = [0.2, 0.2, 0.5] 
 bn = [True, True, True]
-results_path = helper.make_directory('../results2', 'synthetic')
+results_path = helper.make_directory('../results', 'synthetic')
 
 
 # load data
@@ -28,7 +28,7 @@ N, L, A = x_train.shape
 num_labels = y_train.shape[1]
 
 
-for grad in [False, True]:
+for grad in [True]:
   if grad:
     epsilon = 0.05
     num_steps = 15

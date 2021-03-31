@@ -2,3 +2,5 @@ python train_cnn_dist.py
 python train_cnn_local.py
 python train_cnn_shallow.py
 python train_robust_cnn_dist.py
+python train_robust_cnn_local.py
+python train_robust_cnn_shallow.py
