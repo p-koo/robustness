@@ -124,21 +124,25 @@ for reg in [False]:
                    smoothgrad_roc, smoothgrad_pr,
                    intgrad_roc, intgrad_pr,
                    expintgrad_roc, expintgrad_pr,
-                   mut_signal, mut_noise_max, mut_noise_mean, mut_noise_topk, 
-                   sal_signal, sal_noise_max, sal_noise_mean, sal_noise_topk, 
-                   sg_signal, sg_noise_max, sg_noise_mean, sg_noise_topk, 
-                   int_signal, int_noise_max, int_noise_mean, int_noise_topk, 
-                   expint_signal, expint_noise_max, expint_noise_mean, expint_noise_topk]
+                   tfomics.evaluate.calculate_snr(sal_signal, sal_noise_mean), 
+                   tfomics.evaluate.calculate_snr(mut_signal, mut_noise_mean),
+                   tfomics.evaluate.calculate_snr(int_signal, int_noise_mean),
+                   tfomics.evaluate.calculate_snr(sg_signal, sg_noise_mean),
+                   tfomics.evaluate.calculate_snr(expint_signal, expint_noise_mean),
+                   tfomics.evaluate.calculate_snr(sal_signal, sal_noise_topk), 
+                   tfomics.evaluate.calculate_snr(mut_signal, mut_noise_topk),
+                   tfomics.evaluate.calculate_snr(int_signal, int_noise_topk),
+                   tfomics.evaluate.calculate_snr(sg_signal, sg_noise_topk),
+                   tfomics.evaluate.calculate_snr(expint_signal, expint_noise_topk)]
+
+
         headers = ['mutagenesis_roc', 'mutagenesis_pr', 
                    'saliency_roc', 'saliency_pr',
                    'smoothgrad_roc', 'smoothgrad_pr',
                    'intgrad_roc', 'intgrad_pr',
                    'expintgrad_roc', 'expintgrad_pr',
-                   'mut_signal', 'mut_noise_max', 'mut_noise_mean', 'mut_noise_topk', 
-                   'sal_signal', 'sal_noise_max', 'sal_noise_mean', 'sal_noise_topk', 
-                   'sg_signal', 'sg_noise_max', 'sg_noise_mean', 'sg_noise_topk', 
-                   'int_signal', 'int_noise_max', 'int_noise_mean', 'int_noise_topk', 
-                   'expint_signal', 'expint_noise_max', 'expint_noise_mean', 'expint_noise_topk']
+                   'sal_snr', 'mut_snr', 'sg_snr', 'expint_snr',
+                   'sal_snr_topk', 'mut_snr_topk', 'sg_snr_topk', 'expint_snr_topk']
         df = pd.DataFrame(data=np.array(results).T, columns=headers)
         df.to_csv(os.path.join(results_path, 'results_'+name+'.tsv'), sep='\t', index=False, float_format="%.5f")
 
@@ -163,11 +167,12 @@ for reg in [False]:
         plt.close()
 
         # plot signal to mean noise ratio
-        scores = [sal_signal/sal_noise_mean, 
-                  mut_signal/mut_noise_mean,
-                  int_signal/int_noise_mean,
-                  sg_signal/sg_noise_mean,
-                  expint_signal/expint_noise_mean]
+        scores = [tfomics.evaluate.calculate_snr(sal_signal, sal_noise_mean), 
+                  tfomics.evaluate.calculate_snr(mut_signal, mut_noise_mean),
+                  tfomics.evaluate.calculate_snr(int_signal, int_noise_mean),
+                  tfomics.evaluate.calculate_snr(sg_signal, sg_noise_mean),
+                  tfomics.evaluate.calculate_snr(expint_signal, expint_noise_mean)]
+
         names = ['Saliency', 'Mutagenesis', 'Integrated-Grad', 'SmoothGrad', 'Expected IntGrad']
         fig = plt.figure(figsize=(6,4))
         ax = tfomics.impress.box_violin_plot(scores, ylabel='SNR', xlabel=names)
@@ -177,11 +182,12 @@ for reg in [False]:
         plt.close()
 
         # plot signal to top-k noise ratio
-        scores = [sal_signal/sal_noise_topk, 
-                  mut_signal/mut_noise_topk,
-                  int_signal/int_noise_topk,
-                  sg_signal/sg_noise_topk,
-                  expint_signal/expint_noise_topk]
+        scores = [tfomics.evaluate.calculate_snr(sal_signal, sal_noise_topk), 
+                  tfomics.evaluate.calculate_snr(mut_signal, mut_noise_topk),
+                  tfomics.evaluate.calculate_snr(int_signal, int_noise_topk),
+                  tfomics.evaluate.calculate_snr(sg_signal, sg_noise_topk),
+                  tfomics.evaluate.calculate_snr(expint_signal, expint_noise_topk)]
+          
         names = ['Saliency', 'Mutagenesis', 'Integrated-Grad', 'SmoothGrad', 'Expected IntGrad']
         fig = plt.figure(figsize=(6,4))
         ax = tfomics.impress.box_violin_plot(scores, ylabel='SNR', xlabel=names)
@@ -189,6 +195,4 @@ for reg in [False]:
         outfile = os.path.join(results_path, 'signal_topk_'+name+'.pdf')
         fig.savefig(outfile, format='pdf', dpi=200, bbox_inches='tight')
         plt.close()
-
-
 
