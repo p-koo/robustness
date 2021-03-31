@@ -25,7 +25,7 @@ N, L, A = x_train.shape
 num_labels = y_train.shape[1]
 
 
-for reg in [False]:
+for reg in [False, True]:
   if reg:
     dropout=[0.1, 0.2, 0.3, 0.4, 0.5] 
     bn=[True, True, True, True, True]
@@ -133,14 +133,13 @@ for reg in [False]:
                    tfomics.evaluate.calculate_snr(sg_signal, sg_noise_topk),
                    tfomics.evaluate.calculate_snr(expint_signal, expint_noise_topk)]
 
-
         headers = ['mutagenesis_roc', 'mutagenesis_pr', 
                    'saliency_roc', 'saliency_pr',
                    'smoothgrad_roc', 'smoothgrad_pr',
                    'intgrad_roc', 'intgrad_pr',
                    'expintgrad_roc', 'expintgrad_pr',
-                   'sal_snr', 'mut_snr', 'sg_snr', 'expint_snr',
-                   'sal_snr_topk', 'mut_snr_topk', 'sg_snr_topk', 'expint_snr_topk']
+                   'sal_snr', 'mut_snr', 'int_snr', 'sg_snr', 'expint_snr',
+                   'sal_snr_topk', 'mut_snr_topk', 'int_snr_topk', 'sg_snr_topk', 'expint_snr_topk']
         df = pd.DataFrame(data=np.array(results).T, columns=headers)
         df.to_csv(os.path.join(results_path, 'results_'+name+'.tsv'), sep='\t', index=False, float_format="%.5f")
 
